@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Notification system in a chrome extension",
+    "description": "Check every seconds if something has changed",
+    "version": "1.3.5",
+    "homepage_url": "https://github.com/btronquo/",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "NotifSystem"
+    },
+    "background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+    "permissions": [
+        "activeTab", "notifications", "https://*/*", "http://*/*", "tabs"
+    ],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+}
+
